@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { PostData, PostModalProps } from "../../interface";
-import Posts from "../../page/posts";
 
 
 const PostModal: React.FC<PostModalProps> = ({onClose, onSubmit}) => {
@@ -18,8 +17,8 @@ const PostModal: React.FC<PostModalProps> = ({onClose, onSubmit}) => {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault()
-        onsubmit(post);
-        onclose();
+        onSubmit(post);
+        onClose();
     };
 
     return (
